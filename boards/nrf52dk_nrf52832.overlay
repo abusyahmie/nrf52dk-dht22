@@ -1,0 +1,12 @@
+/{
+    aliases{
+		dht22 = &dht22;
+	};
+	dht22: dht {
+        compatible = "aosong,dht";
+        status = "okay";
+        label = "DHT22";
+        dio-gpios = <&gpio0 11 GPIO_ACTIVE_HIGH >;  // Replace with the ports and pins you will be using
+		dht22;
+    };
+};
