@@ -11,6 +11,6 @@ It was written by Maaz Shaikh on August 15, 2025.
 
 I run this app on my device nRF52_DK-nRF52832 and it is working successfully.
 
-I used GitHub Copilot to turn to turn the app into a BLE peripheral that advertises a custom Environmental Service with temperature and humidity characteristics (read + notify). The code periodically samples the DHT22, exposes the last-measured values for reads, and notifies subscribed centrals. It also handles connections and safe disconnection.
+I used GitHub Copilot to turn the app into a BLE peripheral that advertises a custom Environmental Service with temperature and humidity characteristics (read + notify). The code periodically samples the DHT22, exposes the last-measured values for reads, and notifies subscribed centrals. It also handles connections and safe disconnection.
 
 I managed to get it worked. I still continuing enhancing this app further using GitHub Copilot as an assistant.
