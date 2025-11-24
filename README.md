@@ -1,5 +1,5 @@
 # nrf52dk-dht22
-Turn a simple interface to connect nrf52dk with DHT22 sensor into BLE (bluetooth low energy) peripheral app.
+## Turn a simple interface to connect nrf52dk with DHT22 sensor into BLE (bluetooth low energy) peripheral app.
 
 This project was originally taken from the following repository:
 https://github.com/MaazSk/nrf7002dk-dht22
