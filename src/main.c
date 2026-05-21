@@ -257,23 +257,11 @@ int main(void) {
     };
 
     
-// #ifdef BT_LE_ADV_PARAM
-//     /* Preferred: explicit adv param struct (non-deprecated). */
-//     static const struct bt_le_adv_param adv_params = BT_LE_ADV_PARAM(
-//         BT_LE_ADV_OPT_CONNECTABLE | BT_LE_ADV_OPT_USE_NAME,
-//         BT_GAP_ADV_FAST_INT_MIN_2, BT_GAP_ADV_FAST_INT_MAX_2, NULL);
-//     err = bt_le_adv_start(&adv_params, ad, ARRAY_SIZE(ad), NULL, 0);
-// #else
-//     /* Fallback for older SDKs where BT_LE_ADV_PARAM isn't present */
-//     err = bt_le_adv_start(BT_LE_ADV_CONN_NAME, ad, ARRAY_SIZE(ad), NULL, 0);
-// #endif
-
+// Preferred: use explicit advertising parameter macros instead of deprecated connectable options.
+// BT_LE_ADV_CONN_FAST_1 uses 100 ms fast advertising.
     err = bt_le_adv_start(
-        BT_LE_ADV_PARAM(BT_LE_ADV_OPT_CONNECTABLE | BT_LE_ADV_OPT_USE_IDENTITY,
-                    BT_GAP_ADV_FAST_INT_MIN_2,
-                    BT_GAP_ADV_FAST_INT_MAX_2,
-                    NULL),
-                    ad, ARRAY_SIZE(ad), NULL, 0);
+        BT_LE_ADV_CONN_FAST_1,
+        ad, ARRAY_SIZE(ad), NULL, 0);
 
     if (err) {
         LOG_ERR("Advertising failed to start (err %d)", err);
